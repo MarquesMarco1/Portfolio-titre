@@ -1651,89 +1651,377 @@ Galerie Circulaire 3D - Projects
 }
 
 /* ====================================
-Presentation Section Responsive
+   RESPONSIVE DESIGN - MOBILE & TABLETTE
 ==================================== */
 
-.presentation-content {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  width: 100%;
-  justify-content: center;
-}
+/* ====================================
+   TABLETTE (481px - 1024px)
+==================================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+  /* Section Presentation */
+  #presentation {
+    min-height: 80vh;
+    padding: 4rem 2rem;
+  }
 
-.presentation-image-wrapper {
-  flex: 0 0 auto;
-}
-
-.presentation-image {
-  width: 400px;
-  height: 400px;
-}
-
-.presentation-text {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.presentation-title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
-}
-
-.presentation-description {
-  font-size: 1.125rem;
-  color: #cbd5e1;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-/* Responsive Mobile */
-@media (max-width: 768px) {
-  .presentation-content {
+  #presentation > div {
+    max-width: 90%;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
 
-  .presentation-image {
-    width: 250px;
-    height: 250px;
+  #presentation .profile-image-container {
+    width: 280px !important;
+    height: 280px !important;
   }
 
-  .presentation-title {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-    margin-bottom: 1rem;
+  #presentation h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
   }
 
-  .presentation-description {
-    font-size: 1rem;
-    padding: 0 1rem;
+  #presentation p {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Sections générales */
+  section {
+    padding: 4rem 2rem !important;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
+
+  /* Grids */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Cards */
+  .glass {
+    padding: 2rem !important;
+  }
+
+  /* Contact */
+  #contact .grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
+/* ====================================
+   MOBILE (max-width: 480px)
+==================================== */
 @media (max-width: 480px) {
-  .presentation-image {
-    width: 200px;
-    height: 200px;
-    border-width: 4px;
+  /* Body and main container */
+  body {
+    font-size: 14px;
   }
 
-  .presentation-title {
-    font-size: 1.5rem;
+  /* Section Presentation - FIX PRINCIPAL */
+  #presentation {
+    min-height: 100vh !important;
+    height: auto !important;
+    padding: 6rem 1rem 3rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  .presentation-description {
-    font-size: 0.9rem;
+  #presentation > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  /* Image de profil */
+  #presentation .profile-image-container {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Texte Presentation */
+  #presentation h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  #presentation .hero-badge {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.8rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #presentation p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  /* Boutons CTA */
+  #presentation .hero-cta {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+  }
+
+  #presentation .btn-elegant,
+  #presentation .social-link {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    justify-content: center !important;
+  }
+
+  /* Sections générales */
+  section {
+    padding: 3rem 1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 2rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  /* About Section */
+  #about .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  #about .glass {
+    padding: 1.5rem !important;
+  }
+
+  #about h3 {
+    font-size: 1.25rem !important;
+  }
+
+  #about p, #about li {
+    font-size: 0.875rem !important;
+  }
+
+  /* Skills Section */
+  #skills .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  #skills .glass {
+    padding: 1rem !important;
+  }
+
+  #skills img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  #skills h3 {
+    font-size: 0.8rem !important;
+  }
+
+  /* CV Section */
+  #cv {
+    padding: 3rem 1rem !important;
+  }
+
+  #cv .glass {
+    padding: 2rem 1.5rem !important;
+  }
+
+  #cv h3 {
+    font-size: 1.5rem !important;
+  }
+
+  #cv p {
+    font-size: 0.9rem !important;
+  }
+
+  #cv .btn-elegant {
+    width: 100% !important;
+    max-width: 280px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Contact Section */
+  #contact {
+    padding: 3rem 1rem !important;
+  }
+
+  #contact .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  #contact .glass {
+    padding: 1.5rem !important;
+  }
+
+  #contact h3 {
+    font-size: 1.25rem !important;
+  }
+
+  #contact p, #contact a {
+    font-size: 0.875rem !important;
+  }
+
+  #contact input,
+  #contact textarea {
+    font-size: 0.9rem !important;
+    padding: 0.75rem !important;
+  }
+
+  #contact .btn-elegant {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+    padding: 0.875rem 1.5rem !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 1rem !important;
+  }
+
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  footer p {
+    font-size: 0.8rem !important;
+  }
+
+  /* Grids généraux */
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Cards et Glass */
+  .glass {
+    padding: 1.5rem !important;
+    border-radius: 1rem !important;
+  }
+
+  .card {
+    padding: 1.25rem !important;
+  }
+
+  /* Navigation Arrow */
+  .scroll-indicator {
+    bottom: 2rem !important;
+  }
+
+  .nav-arrow {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Menu hamburger */
+  .menu-toggle {
+    right: 1rem !important;
+    top: 1rem !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .menu-toggle span {
+    width: 22px !important;
+  }
+
+  /* Overlay navigation */
+  .overlay-navigation nav li a {
+    font-size: 1.25rem !important;
+  }
+
+  /* Modals */
+  .modal-content {
+    width: 95% !important;
+    max-height: 90vh !important;
+    padding: 1.5rem !important;
+    margin: 1rem !important;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .modal-body {
+    font-size: 0.875rem !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Utilités */
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  .max-w-7xl {
+    max-width: 100% !important;
+  }
+
+  /* Fix pour les éléments qui débordent */
+  * {
+    max-width: 100%;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+
+/* ====================================
+   MOBILE TRÈS PETIT (max-width: 375px)
+==================================== */
+@media (max-width: 375px) {
+  #presentation h1 {
+    font-size: 1.5rem !important;
+  }
+
+  #presentation .profile-image-container {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+
+  #skills .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }

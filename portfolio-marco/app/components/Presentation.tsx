@@ -68,9 +68,15 @@ export default function Presentation() {
         justifyContent: 'center'
       }}>
         {/* Section haute: Image + Nom/Description */}
-        <div className="presentation-content">
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '4rem',
+          width: '100%',
+          justifyContent: 'center'
+        }}>
           {/* Photo de profil à gauche */}
-          <div className="presentation-image-wrapper">
+          <div style={{ flex: '0 0 auto' }}>
           <div 
             style={{ position: 'relative' }}
             onMouseEnter={(e) => {
@@ -99,8 +105,9 @@ export default function Presentation() {
             {/* Cercle principal avec la photo */}
             <div 
               data-image
-              className="presentation-image"
               style={{
+                width: '400px',
+                height: '400px',
                 borderRadius: '50%',
                 overflow: 'hidden',
                 border: '8px solid rgba(71, 85, 105, 0.3)',
@@ -160,14 +167,36 @@ export default function Presentation() {
         </div>
 
           {/* Contenu à droite: Nom + Description + Badge */}
-          <div className="presentation-text">
+          <div style={{ 
+            flex: '1', 
+            minWidth: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center'
+          }}>
             {/* Nom */}
-            <h1 className="presentation-title">
+            <h1 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: '700',
+              marginBottom: '1.5rem',
+              background: 'linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              lineHeight: '1.2'
+            }}>
               Marc Xavier Marques
             </h1>
             
             {/* Description */}
-            <p className="presentation-description">
+            <p style={{
+              fontSize: '1.125rem',
+              color: '#cbd5e1',
+              lineHeight: '1.6',
+              maxWidth: '600px',
+              marginBottom: '2rem'
+            }}>
               Développeur Full Stack de 27 ans avec une forte affinité pour le backend. Passionné par la diversité des projets et animé par une soif d&apos;apprentissage quotidien, je m&apos;investis dans la création de solutions techniques robustes et innovantes.
             </p>
             

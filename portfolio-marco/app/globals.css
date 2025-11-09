@@ -1651,61 +1651,89 @@ Galerie Circulaire 3D - Projects
 }
 
 /* ====================================
-Responsive Mobile Optimizations
+Presentation Section Responsive
 ==================================== */
 
-/* Petits écrans (mobiles) */
+.presentation-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.presentation-image-wrapper {
+  flex: 0 0 auto;
+}
+
+.presentation-image {
+  width: 400px;
+  height: 400px;
+}
+
+.presentation-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.presentation-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.presentation-description {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Mobile */
 @media (max-width: 768px) {
-  /* Présentation section - Force column layout on mobile */
-  section#presentation > div {
-    padding: 1rem !important;
-    gap: 2rem !important;
+  .presentation-content {
+    flex-direction: column;
+    gap: 2rem;
   }
-  
-  section#presentation > div > div:first-child {
-    flex-direction: column !important;
-    gap: 2rem !important;
+
+  .presentation-image {
+    width: 250px;
+    height: 250px;
   }
-  
-  /* Image profile - Reduce size on mobile */
-  section#presentation img {
-    max-width: 250px !important;
+
+  .presentation-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    margin-bottom: 1rem;
   }
-  
-  /* Textes - Reduce font sizes */
-  section#presentation h1 {
-    font-size: 2rem !important;
-  }
-  
-  section#presentation p {
-    font-size: 1rem !important;
+
+  .presentation-description {
+    font-size: 1rem;
     padding: 0 1rem;
-  }
-  
-  /* Buttons and badges */
-  section#presentation button,
-  section#presentation a {
-    font-size: 0.9rem !important;
-    padding: 0.6rem 1.2rem !important;
   }
 }
 
-/* Très petits écrans */
 @media (max-width: 480px) {
-  section#presentation > div {
-    padding: 0.5rem !important;
-    gap: 1.5rem !important;
+  .presentation-image {
+    width: 200px;
+    height: 200px;
+    border-width: 4px;
   }
-  
-  section#presentation img {
-    max-width: 200px !important;
+
+  .presentation-title {
+    font-size: 1.5rem;
   }
-  
-  section#presentation h1 {
-    font-size: 1.75rem !important;
-  }
-  
-  section#presentation p {
-    font-size: 0.95rem !important;
+
+  .presentation-description {
+    font-size: 0.9rem;
   }
 }

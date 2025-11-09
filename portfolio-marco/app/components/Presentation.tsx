@@ -56,11 +56,21 @@ export default function Presentation() {
 
   return (
     <section id="presentation" className="hero">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-8 lg:gap-12 min-h-screen justify-center">
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 2rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '3rem',
+        minHeight: '100vh',
+        justifyContent: 'center'
+      }}>
         {/* Section haute: Image + Nom/Description */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 w-full justify-center">
+        <div className="presentation-content">
           {/* Photo de profil à gauche */}
-          <div className="flex-shrink-0">
+          <div className="presentation-image-wrapper">
           <div 
             style={{ position: 'relative' }}
             onMouseEnter={(e) => {
@@ -89,7 +99,7 @@ export default function Presentation() {
             {/* Cercle principal avec la photo */}
             <div 
               data-image
-              className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+              className="presentation-image"
               style={{
                 borderRadius: '50%',
                 overflow: 'hidden',
@@ -150,36 +160,54 @@ export default function Presentation() {
         </div>
 
           {/* Contenu à droite: Nom + Description + Badge */}
-          <div className="flex-1 min-w-0 flex flex-col items-center text-center">
+          <div className="presentation-text">
             {/* Nom */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight"
-                style={{
-                  background: 'linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}>
+            <h1 className="presentation-title">
               Marc Xavier Marques
             </h1>
             
             {/* Description */}
-            <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mb-6 md:mb-8 px-4 md:px-0">
+            <p className="presentation-description">
               Développeur Full Stack de 27 ans avec une forte affinité pour le backend. Passionné par la diversité des projets et animé par une soif d&apos;apprentissage quotidien, je m&apos;investis dans la création de solutions techniques robustes et innovantes.
             </p>
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-slate-800/60 text-gray-300 px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-lg font-medium border border-indigo-500/20"
-                 style={{ backdropFilter: 'blur(10px)' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              backgroundColor: 'rgba(30, 41, 59, 0.6)',
+              color: '#cbd5e1',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '2rem',
+              fontSize: '1.125rem',
+              fontWeight: '500',
+              border: '1px solid rgba(99, 102, 241, 0.2)',
+              backdropFilter: 'blur(10px)'
+            }}>
               <span>Web@cadémie - Epitech</span>
             </div>
           </div>
         </div>
 
         {/* Section basse: Boutons, Infos, Liens - Tous centrés */}
-        <div className="flex flex-col items-center gap-6 md:gap-8 w-full max-w-4xl mt-8 md:mt-16">
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '2rem',
+          width: '100%',
+          maxWidth: '800px',
+          marginTop: '4rem'
+        }}>
           
           {/* Boutons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto px-4 sm:px-0">
+          <div style={{ 
+            display: 'flex', 
+            gap: '1rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}>
             <a href="#projects" className="btn-elegant btn-elegant-primary">
               Voir mes projets
             </a>

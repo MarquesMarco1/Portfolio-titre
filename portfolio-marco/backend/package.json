@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-backend",
+  "version": "2.0.0",
+  "description": "Backend API REST pour le portfolio avec Supabase",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test-api.js"
+  },
+  "keywords": ["portfolio", "api", "supabase", "express", "nodemailer"],
+  "author": "Marc Xavier Marques",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.80.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}

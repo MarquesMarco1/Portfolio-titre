@@ -1649,3 +1649,63 @@ Galerie Circulaire 3D - Projects
   color: var(--text-primary);
   box-shadow: 0 8px 25px rgba(51, 65, 85, 0.2);
 }
+
+/* ====================================
+Responsive Mobile Optimizations
+==================================== */
+
+/* Petits écrans (mobiles) */
+@media (max-width: 768px) {
+  /* Présentation section - Force column layout on mobile */
+  section#presentation > div {
+    padding: 1rem !important;
+    gap: 2rem !important;
+  }
+  
+  section#presentation > div > div:first-child {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  /* Image profile - Reduce size on mobile */
+  section#presentation img {
+    max-width: 250px !important;
+  }
+  
+  /* Textes - Reduce font sizes */
+  section#presentation h1 {
+    font-size: 2rem !important;
+  }
+  
+  section#presentation p {
+    font-size: 1rem !important;
+    padding: 0 1rem;
+  }
+  
+  /* Buttons and badges */
+  section#presentation button,
+  section#presentation a {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 1.2rem !important;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  section#presentation > div {
+    padding: 0.5rem !important;
+    gap: 1.5rem !important;
+  }
+  
+  section#presentation img {
+    max-width: 200px !important;
+  }
+  
+  section#presentation h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  section#presentation p {
+    font-size: 0.95rem !important;
+  }
+}
